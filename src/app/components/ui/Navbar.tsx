@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IoClose, IoMenuOutline } from "react-icons/io5"
 
-import { IconButton } from '..'
+import { IconButton, MenuItem } from '..'
 import { useState } from 'react';
 
 interface IMenuOptions {
@@ -37,7 +37,8 @@ const MENU_OPTIONS: IMenuOptions[] = [
 
 
 export const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // TODO: FIX THIS STATE IS WORKING ON TRUE
+    const [isMenuOpen, setIsMenuOpen] = useState(true);
     const toggleMenu = () => {
         console.log(isMenuOpen)
         return setIsMenuOpen(!isMenuOpen);
@@ -63,11 +64,11 @@ export const Navbar = () => {
             />
 
             <nav className={`w-full h-[calc(100vh-120px)] bg-background top-[120px] left-0 z-10 ${isMenuOpen ? 'hidden':'absolute'} transition-opacity duration-200`}>
-                <ul>
+                <ul className='flex flex-col gap-4'>
                     {
-                        MENU_OPTIONS.map(menu => {
-                            return <li key={menu.menuText}>{menu.menuText}</li>
-                        })
+                        MENU_OPTIONS.map( item => (
+                            <MenuItem menuText={item.menuText} onClick={() => setIsMenuOpen(!isMenuOpen)} url={item.url} key={item.url}/>
+                        ))
                     }
                 </ul>
             </nav>
