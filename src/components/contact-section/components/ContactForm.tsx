@@ -21,6 +21,7 @@ export const ContactForm = () => {
     return (
         <Formik initialValues={formInitialValues} onSubmit={(values: FormValues, { setSubmitting }: FormikHelpers<FormValues>) => { console.log(values); setSubmitting(false) }}>
             <Form className="flex flex-col gap-6">
+
                 <div className="flex flex-col gap-4">
                     <label htmlFor="fullName" className="text-headings font-bold text-lg">Nombre completo</label>
                     <Field id={"fullName"} name="fullName" placeholder="Jhon Doe" className="bg-background rounded-lg p-3 border border-input-stroke placeholder:text-placeholder" />
@@ -41,7 +42,7 @@ export const ContactForm = () => {
                     <Field id={"message"} name="message"  placeholder="Escribe tu mensaje..." as="textarea" className="bg-background rounded-lg p-3 border border-input-stroke placeholder:text-placeholder h-[240px]" />
                 </div>
 
-                <Button buttonText="Enviar mensaje"  type="submit"/>
+                <Button buttonText="Enviar mensaje"  type="submit" size="large"/>
             </Form>
         </Formik>
     )

@@ -33,7 +33,7 @@ export const Navbar = () => {
     };
 
     return (
-        <header className={`py-6 flex justify-between top-0 fixed px-5 left-0 right-0 border-b-2 border-transparent ${isMenuOpen ? '' : 'bg-background'} ${navColor ? 'bg-background border-background-alt transition-colors' : ''}`}>
+        <header className={`py-6 flex justify-between top-0 fixed px-5 md:px-8 left-0 right-0 border-b-2 ${isMenuOpen ? 'border-background-alt' : 'border-transparent'} ${isMenuOpen ? '' : 'bg-background'} ${navColor ? 'bg-background transition-colors' : ''}`}>
             <Link href={'/'} className='flex gap-2 items-center'>
                 <Image src={"/logo.svg"} width={40} height={40} alt='Fernando Gorordo Logo' />
                 <div>

@@ -1,11 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Button, CopyrightText, SocialMediaBox } from ".."
+import { Button, CopyrightText, FooterForm, SocialMediaBox } from ".."
+
 
 export const Footer = () => {
   return (
-    <footer className="px-5 py-14 flex flex-col gap-10">
-      <div className="flex justify-between">
+    <footer className="px-5 py-14 grid grid-cols-1 gap-10  md:px-8 lg:px-24 lg:grid-cols-3">
+      <div className="flex justify-between lg:flex-col lg:justify-start lg:gap-10">
         <Link href={'/'} className='flex gap-2 items-center'>
           <Image src={"/logo.svg"} width={40} height={40} alt='Fernando Gorordo Logo' />
           <div>
@@ -18,7 +19,7 @@ export const Footer = () => {
 
       <nav className="flex flex-col gap-6">
         <h6 className="uppercase font-bold text-headings text-xl">Explorar</h6>
-        <ul className="flex flex-col gap-4">
+        <ul className="flex flex-col gap-4 md:flex-row md:justify-between lg:flex-col">
           <li>
             <Link href="/" className="text-xl">Inicio</Link>
           </li>
@@ -38,12 +39,12 @@ export const Footer = () => {
       </nav>
 
       <article>
-        <h6 className="text-headings font-bold text-xl">Entérate de tods las actualizaciones y mis trabajos</h6>
-        {/* Form */}
+        <h6 className="text-headings font-bold text-xl mb-4">Entérate de tods las actualizaciones y mis trabajos.</h6>
+        <FooterForm />
       </article>
 
       <article>
-        <Button buttonText="Descargar C.V." className="w-full"/>
+        <Button buttonText="Descargar C.V." className="w-full" size="large" color="secondary"/>
       </article>
       <CopyrightText />
     </footer>

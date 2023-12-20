@@ -27,7 +27,7 @@ const servicesCards = [
 
 export const ServicesSection = () => {
   return (
-    <section className="flex flex-col gap-10 px-5 py-14">
+    <section className="py-14 px-5 grid grid-cols-1 md:px-8 lg:px-24 lg:grid-cols-3">
       {
         servicesCards.map(card => (
           <ServiceCard cardBody={card.cardBody} cardTitle={card.cardTitle} key={card.cardTitle} iconSrc={card.iconSrc} iconAlt={card.iconAlt} />

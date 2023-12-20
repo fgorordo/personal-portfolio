@@ -28,7 +28,7 @@ const NotFound = () => {
                 <Link href={"/"} className="text-center block text-secondary underline text-xl">Volver al inicio</Link>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default NotFound;

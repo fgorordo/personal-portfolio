@@ -21,5 +21,5 @@ export const AboutMeSection = () => {
                 </div>
             </article>
         </section>
-    )
-}
+    );
+};

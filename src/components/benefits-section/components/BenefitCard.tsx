@@ -1,15 +1,15 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 import bulletIcon from "@/assets/bullet-icon.svg";
 
 interface Props {
     title: string;
     body:string;
-}
+};
 
 export const BenefitCard = ({ title, body }:Props) => {
     return (
-        <div className='flex gap-4'>
+        <div className='flex gap-4 md:gap-6 min-h-[216px] max-h-[216px] md:max-h-[140px] md:min-h-[140px]'>
             <div className='flex gap-4 flex-col justify-center items-center'>
                 <Image src={bulletIcon} alt='Bullet Icon' width={48} height={48} />
                 <div className='w-full h-full flex justify-center items-center flex-col'>
@@ -21,5 +21,5 @@ export const BenefitCard = ({ title, body }:Props) => {
                 <p>{body}</p>
             </div>
         </div>
-    )
-}
+    );
+};
