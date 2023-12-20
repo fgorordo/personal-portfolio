@@ -1,7 +1,8 @@
-import type { Metadata } from 'next'
 import { Inter, Lato } from 'next/font/google'
+import type { Metadata } from 'next'
+
 import './globals.css'
-import { Navbar } from './components'
+import { Footer, Navbar } from '@/components'
 
 const lato = Lato({ subsets: ['latin'], weight: ['100', '300', '400', '700', '900'] })
 
@@ -16,10 +17,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='bg-background text-text px-5'>
+    <html lang="en" className='bg-background text-text'>
       <body className={lato.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
