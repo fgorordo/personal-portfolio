@@ -1,11 +1,11 @@
-import { Inter, Lato } from 'next/font/google';
+import { Inter, Lato, Montserrat, Montserrat_Alternates, Poppins,  } from 'next/font/google';
 import type { Metadata } from 'next';
 
 import './globals.css';
 import { Footer, Navbar } from '@/components';
 import { ReactNode } from 'react';
 
-const lato = Lato({ subsets: ['latin'], weight: ['100', '300', '400', '700', '900'] });
+const lato = Montserrat({ subsets: ['latin'], weight: ['100', '300', '400', '700', '900'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',

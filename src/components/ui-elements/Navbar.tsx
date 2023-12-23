@@ -33,12 +33,12 @@ export const Navbar = () => {
     };
 
     return (
-        <header className={`py-6 flex justify-between top-0 fixed px-5 md:px-8 left-0 right-0 border-b-2 ${isMenuOpen ? 'border-background-alt' : 'border-transparent'} ${isMenuOpen ? '' : 'bg-background'} ${navColor ? 'bg-background transition-colors' : ''}`}>
+        <header className={`py-6 flex justify-between top-0 fixed px-5 md:px-8 lg:px-24 left-0 right-0 ${isMenuOpen ? 'border-background-alt' : 'border-transparent'} ${isMenuOpen ? '' : 'bg-background'} ${navColor ? 'bg-background transition-colors' : ''}`}>
             <Link href={'/'} className='flex gap-2 items-center'>
-                <Image src={"/logo.svg"} width={40} height={40} alt='Fernando Gorordo Logo' />
+                <Image src={"/logo.svg"} width={32} height={32} alt='Fernando Gorordo Logo' />
                 <div>
-                    <h1 className='font-bold text-headings'>Fernando Gorordo</h1>
-                    <h2 className='font-bold text-headings text-sm'>Fullstack Developer</h2>
+                    <h1 className='font-bold text-headings text-xs'>Fernando Gorordo</h1>
+                    <h2 className='font-bold text-headings text-xs'>Fullstack Developer</h2>
                 </div>
             </Link>
 
